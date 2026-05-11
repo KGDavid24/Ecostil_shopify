@@ -1,0 +1,260 @@
+{% schema %}
+{
+  "name": "Egyedi Footer Szekció",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Szekció Beállítások"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Háttérszín",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Szöveg színe",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Felső térköz",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Alsó térköz",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Kép",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Kép kiválasztása"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "label": "Kép szélessége",
+          "default": 150
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Kép link (opcionális)"
+        }
+      ]
+    },
+    {
+      "type": "menu_block",
+      "name": "Menü",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Menü címe",
+          "default": "Gyorslinkek"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menü kiválasztása"
+        }
+      ]
+    },
+    {
+      "type": "text_block",
+      "name": "Szöveg",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Címsor",
+          "default": "Rólunk"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Szöveg tartalom",
+          "default": "<p>Ide írhatsz rövid bemutatkozást vagy elérhetőséget.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Egyedi Footer Szekció",
+      "blocks": [
+        {
+          "type": "image_block"
+        },
+        {
+          "type": "menu_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<div class="custom-footer-wrapper" style="background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};">
+  <div class="page-width">
+    <div class="custom-footer-grid">
+      {%- for block in section.blocks -%}
+        <div class="footer-block footer-block--{{ block.type }}" {{ block.shopify_attributes }}>
+          
+          {%- case block.type -%}
+            
+            {%- when 'image_block' -%}
+              <div class="footer-image-container">
+                {%- if block.settings.image != blank -%}
+                  {%- assign image_width = block.settings.image_width -%}
+                  {%- if block.settings.link != blank -%}
+                    <a href="{{ block.settings.link }}">
+                  {%- endif -%}
+                    <img
+                      src="{{ block.settings.image | image_url: width: image_width }}"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      loading="lazy"
+                      width="{{ image_width }}"
+                      height="{{ image_width | divided_by: block.settings.image.aspect_ratio | ceil }}"
+                      style="max-width: {{ image_width }}px; width: 100%; height: auto;"
+                    >
+                  {%- if block.settings.link != blank -%}
+                    </a>
+                  {%- endif -%}
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+
+            {%- when 'menu_block' -%}
+              {%- if block.settings.title != blank -%}
+                <h3 class="footer-block__heading">{{ block.settings.title }}</h3>
+              {%- endif -%}
+              {%- if block.settings.menu != blank -%}
+                <ul class="footer-block__details-content list-unstyled">
+                  {%- for link in block.settings.menu.links -%}
+                    <li>
+                      <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                        {{ link.title }}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+
+            {%- when 'text_block' -%}
+              <div class="footer-block__details-content">
+                {%- if block.settings.title != blank -%}
+                  <h3 class="footer-block__heading">{{ block.settings.title }}</h3>
+                {%- endif -%}
+                {%- if block.settings.text != blank -%}
+                  <div class="rte">
+                    {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+              </div>
+
+          {%- endcase -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<style>
+  .custom-footer-wrapper {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    border-top: 1px solid rgba(0,0,0,0.1); /* Opcionális vékony vonal a tetején */
+  }
+
+  .page-width {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Grid elrendezés: automatikusan egymás mellé rakja a blokkokat */
+  .custom-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem; /* Távolság a blokkok között */
+    align-items: start;
+  }
+
+  .footer-block__heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    color: inherit;
+  }
+
+  .footer-block__details-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-block__details-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-block__details-content a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+
+  .footer-block__details-content a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .placeholder-svg {
+    background-color: #e6e6e6;
+    display: block;
+    max-width: 150px;
+    height: auto;
+  }
+  
+  /* Mobil nézet finomhangolás */
+  @media screen and (max-width: 749px) {
+    .custom-footer-grid {
+      grid-template-columns: 1fr; /* Mobilon minden egymás alatt */
+      text-align: center; /* Mobilon középre igazítás (opcionális) */
+    }
+    
+    .footer-image-container {
+        display: flex;
+        justify-content: center; /* Képek középre mobilon */
+    }
+  }
+</style>

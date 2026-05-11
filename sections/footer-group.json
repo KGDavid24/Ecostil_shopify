@@ -1,0 +1,322 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "custom_footer_gJD76D": {
+      "type": "custom-footer",
+      "blocks": {
+        "image_block_qbUTqD": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/ecostil_-_finantare.png",
+            "image_width": 350,
+            "link": ""
+          }
+        },
+        "text_block_WRTJhF": {
+          "type": "text_block",
+          "settings": {
+            "title": "Programul Educație și Ocupare 2021-2027Prioritatea 4. Antreprenoriat și economie socială",
+            "text": "<p><strong>Obiectiv specific:</strong> ESO4.1.<br/><strong>Apel: </strong>PEO/103/PEO_P4/OP4/ESO4.1/PEO_A52 - Sprijin pentru înființarea de întreprinderi sociale în mediul urban - Regiuni mai putin dezvoltate<br/><strong>Titlu proiect:</strong> Academia de afaceri sociale<br/><strong>Cod MySMIS2021+:</strong> 305409</p>"
+          }
+        },
+        "menu_block_X7inFP": {
+          "type": "menu_block",
+          "settings": {
+            "title": "Menu",
+            "menu": "main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_qbUTqD",
+        "text_block_WRTJhF",
+        "menu_block_X7inFP"
+      ],
+      "name": "Egyedi Footer Szekció",
+      "settings": {
+        "background_color": "#f4f4f4",
+        "text_color": "#333333",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "footer_m9NzUG": {
+      "type": "footer",
+      "blocks": {
+        "group_jbFLPR": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "image_y8jFa9": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/sigla_guv_coroana_albastru.png",
+                "link": "",
+                "image_ratio": "square",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_6mggfd": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p><strong>Programul Educație și Ocupare 2021-2027<br/>Prioritatea 4. Antreprenoriat și economie socială</strong><br/><strong>Obiectiv specific:</strong> ESO4.1.<br/><strong>Apel: </strong>PEO/103/PEO_P4/OP4/ESO4.1/PEO_A52 - Sprijin pentru înființarea de întreprinderi sociale în mediul urban - Regiuni mai putin dezvoltate<br/><strong>Titlu proiect:</strong> Academia de afaceri sociale<br/><strong>Cod MySMIS2021+:</strong> 305409</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_y8jFa9",
+            "text_6mggfd"
+          ]
+        },
+        "group_bjUqXK": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "image_3TzTFb": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/RO_FundedbytheEU_RGB_POS.png",
+                "link": "",
+                "image_ratio": "adapt",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_3TzTFb"
+          ]
+        }
+      },
+      "block_order": [
+        "group_jbFLPR",
+        "group_bjUqXK"
+      ],
+      "disabled": true,
+      "name": "t:names.footer",
+      "settings": {
+        "section_width": "page-width",
+        "gap": 20,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 30,
+        "padding-block-end": 30
+      }
+    },
+    "footer_utilities_jLGE8U": {
+      "type": "footer-utilities",
+      "blocks": {
+        "footer_copyright_jweRK8": {
+          "type": "footer-copyright",
+          "settings": {
+            "show_powered_by": true,
+            "font_size": "0.75rem",
+            "case": "none"
+          },
+          "blocks": {}
+        },
+        "footer_policy_list_VCdnpa": {
+          "type": "footer-policy-list",
+          "settings": {
+            "font_size": "0.75rem",
+            "case": "none"
+          },
+          "blocks": {}
+        },
+        "social_links_Ew63Kq": {
+          "type": "social-links",
+          "settings": {
+            "facebook_url": "https://www.facebook.com/",
+            "instagram_url": "https://www.instagram.com/",
+            "youtube_url": "https://www.youtube.com/",
+            "tiktok_url": "https://www.tiktok.com/",
+            "twitter_url": "https://x.com/",
+            "threads_url": "",
+            "linkedin_url": "",
+            "bluesky_url": "",
+            "snapchat_url": "",
+            "pinterest_url": "",
+            "tumblr_url": "",
+            "vimeo_url": "",
+            "custom_url": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "footer_copyright_jweRK8",
+        "footer_policy_list_VCdnpa",
+        "social_links_Ew63Kq"
+      ],
+      "name": "t:names.utilities",
+      "settings": {
+        "section_width": "page-width",
+        "gap": 24,
+        "divider_thickness": 0,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 20,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_zHbrE4": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".center-section {display: flex; justify-content: center; text-align: center;}"
+      ],
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"center-section\"><script src=\"https://mny.ro/npId.js?p=158556\" type=\"text/javascript\" data-version=\"orizontal\" data-contrast-color=\"#f4f4f4\" ></script></div>",
+        "color_scheme": "scheme-2",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_4HqELw": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"background-color: #F4F4F4; width: 100%;\">\n  <div style=\"max-width: 1200px; margin: 0 auto; padding: 20px 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; text-align: center;\">\n    <a href=\"https://anpc.ro/ce-este-sal/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-describedby=\"a11y-external-message\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0946/9034/5295/files/anpc-sal_1.webp?v=1752568916\" alt=\"Ce este SAL?\" style=\"width: 250px; max-width: 100%; height: auto;\">\n    </a>\n    <a href=\"https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO\" target=\"_blank\" rel=\"noopener noreferrer\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0946/9034/5295/files/anpc-sol_1.webp?v=1752568916\" alt=\"Soluționarea online a litigiilor\" style=\"width: 250px; max-width: 100%; height: auto;\">\n    </a>\n  </div>\n</div>",
+        "color_scheme": "scheme-2",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    }
+  },
+  "order": [
+    "custom_footer_gJD76D",
+    "footer_m9NzUG",
+    "footer_utilities_jLGE8U",
+    "custom_liquid_zHbrE4",
+    "custom_liquid_4HqELw"
+  ]
+}
