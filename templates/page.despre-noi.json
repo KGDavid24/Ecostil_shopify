@@ -15,7 +15,7 @@
         "text_fwNYYV": {
           "type": "text",
           "settings": {
-            "text": "<h1>Despre Ecostil</h1>",
+            "text": "<h1>Despre EcoStil</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",

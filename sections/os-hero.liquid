@@ -1,0 +1,256 @@
+<style>
+  .ecostil-hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 45vw;
+    overflow: hidden;
+  }
+
+  .ecostil-hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .ecostil-hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* desktop only */
+  .ecostil-hero__bg .bg-mobile {
+    display: none;
+  }
+
+  .ecostil-hero__content-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    /* tighter than 1280 so text sits closer to the subject */
+    max-width: 1150px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end; 
+  }
+
+  .ecostil-hero__content {
+    width: 55%; 
+    padding: 20px;
+    text-align: left;
+  }
+
+  .ecostil-hero__title-small,
+  .ecostil-hero__title-large,
+  .ecostil-hero__title-medium {
+    font-family: 'Andika', sans-serif;
+    font-weight: bold;
+    color: #446146;
+    margin: 0;
+  }
+
+  .ecostil-hero__title-small {
+    font-size: clamp(30px, 3.5vw, 49px);
+    margin-bottom: 5px;
+  }
+
+  .ecostil-hero__title-large {
+    /* large display word, tight line-height for stacking */
+    font-size: clamp(80px, 9vw, 150px);
+    line-height: 0.85; 
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  .ecostil-hero__title-medium {
+    font-size: clamp(28px, 3vw, 51px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .ecostil-hero__disclaimer {
+    font-family: Arial, sans-serif;
+    color: #446146;
+    font-size: clamp(16px, 1.3vw, 22px);
+    margin-bottom: 40px;
+  }
+
+  .ecostil-hero__button {
+    display: inline-block;
+    background-color: #C3AA7D;
+    color: #446146 !important;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 18px 45px;
+    font-size: clamp(16px, 1.5vw, 22px);
+    transition: opacity 0.3s ease;
+    border: none;
+    letter-spacing: 1px;
+  }
+
+  .ecostil-hero__button:hover {
+    opacity: 0.8;
+  }
+
+  /* Mobile Adjustments */
+  @media screen and (max-width: 749px) {
+    .ecostil-hero {
+      /* tweak this to nudge text left/right on mobile */
+      --mobile-text-width: 48%; 
+      
+      min-height: 130vw;
+    }
+    
+    /* frame subject on the left */
+    .ecostil-hero__bg img {
+      object-position: 25% center;
+    }
+
+    /* fallback to desktop image if no mobile image is set */
+    .ecostil-hero__bg .bg-desktop {
+      display: block; 
+    }
+    .ecostil-hero__bg:has(.bg-mobile) .bg-desktop {
+      display: none; 
+    }
+    .ecostil-hero__bg .bg-mobile {
+      display: block;
+    }
+
+    .ecostil-hero__content-wrapper {
+      justify-content: flex-end; 
+    }
+
+    .ecostil-hero__content {
+      width: var(--mobile-text-width);
+      padding: 0 15px 0 0; 
+    }
+
+    /* mobile font sizes */
+    .ecostil-hero__title-small {
+      font-size: clamp(24px, 6vw, 29px);
+    }
+
+    .ecostil-hero__title-large {
+      /* low min keeps it on one line */
+      font-size: clamp(40px, 11vw, 60px); 
+      margin-bottom: 5px;
+    }
+
+    .ecostil-hero__title-medium {
+      font-size: clamp(20px, 5vw, 26px);
+      margin-bottom: 15px;
+    }
+
+    .ecostil-hero__disclaimer {
+      font-size: 13px;
+      line-height: 1.2;
+      margin-bottom: 25px;
+    }
+
+    .ecostil-hero__button {
+      padding: 10px 15px; 
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  }
+</style>
+
+<div class="ecostil-hero">
+  <picture class="ecostil-hero__bg">
+    {% if section.settings.image_desktop != blank %}
+      <img class="bg-desktop" src="{{ section.settings.image_desktop | img_url: 'master' }}" alt="Hero Desktop Background">
+    {% endif %}
+    {% if section.settings.image_mobile != blank %}
+      <img class="bg-mobile" src="{{ section.settings.image_mobile | img_url: 'master' }}" alt="Hero Mobile Background">
+    {% endif %}
+  </picture>
+
+  <div class="ecostil-hero__content-wrapper">
+    <div class="ecostil-hero__content">
+      {% if section.settings.title_small != blank %}
+        <h2 class="ecostil-hero__title-small">{{ section.settings.title_small }}</h2>
+      {% endif %}
+      
+      {% if section.settings.title_large != blank %}
+        <h1 class="ecostil-hero__title-large">{{ section.settings.title_large }}</h1>
+      {% endif %}
+      
+      {% if section.settings.title_medium != blank %}
+        <h2 class="ecostil-hero__title-medium">{{ section.settings.title_medium }}</h2>
+      {% endif %}
+      
+      {% if section.settings.disclaimer != blank %}
+        <p class="ecostil-hero__disclaimer">{{ section.settings.disclaimer }}</p>
+      {% endif %}
+      
+      {% if section.settings.btn_text != blank %}
+        <a href="{{ section.settings.btn_link }}" class="ecostil-hero__button">{{ section.settings.btn_text }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom EcoStil Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Desktop Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile Background Image"
+    },
+    {
+      "type": "text",
+      "id": "title_small",
+      "label": "Top Small Heading",
+      "default": "Piesă vestimentară"
+    },
+    {
+      "type": "text",
+      "id": "title_large",
+      "label": "Main Large Word",
+      "default": "CADOU"
+    },
+    {
+      "type": "html",
+      "id": "title_medium",
+      "label": "Bottom Medium Heading",
+      "default": "la prima comandă*<br>peste 100 RON"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer",
+      "label": "Disclaimer Text",
+      "default": "*Campanie valabilă pentru primii 100 de clienți"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "COMANDĂ ACUM"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom EcoStil Hero"
+    }
+  ]
+}
+{% endschema %}

@@ -304,7 +304,7 @@
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<div style=\"background-color: #F4F4F4; width: 100%;\">\n  <div style=\"max-width: 1200px; margin: 0 auto; padding: 20px 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; text-align: center;\">\n    <a href=\"https://anpc.ro/ce-este-sal/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-describedby=\"a11y-external-message\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0946/9034/5295/files/anpc-sal_1.webp?v=1752568916\" alt=\"Ce este SAL?\" style=\"width: 250px; max-width: 100%; height: auto;\">\n    </a>\n    <a href=\"https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO\" target=\"_blank\" rel=\"noopener noreferrer\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0946/9034/5295/files/anpc-sol_1.webp?v=1752568916\" alt=\"Soluționarea online a litigiilor\" style=\"width: 250px; max-width: 100%; height: auto;\">\n    </a>\n  </div>\n</div>",
+        "custom_liquid": "<div style=\"width: 100%;\">\n  <div style=\"max-width: 1200px; margin: 0 auto; padding: 20px 15px; display: flex; justify-content: center;\">\n    <a href=\"https://anpc.ro/ce-este-sal/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-describedby=\"a11y-external-message\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0946/9034/5295/files/anpc-sal_1.webp?v=1752568916\" alt=\"Ce este SAL?\" style=\"width: 250px; max-width: 100%; height: auto;\">\n    </a>\n  </div>\n</div>",
         "color_scheme": "scheme-2",
         "section_width": "page-width",
         "padding-block-start": 0,

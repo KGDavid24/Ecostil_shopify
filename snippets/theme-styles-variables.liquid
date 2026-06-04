@@ -686,3 +686,33 @@
     --cart-secondary-font-weight: var(--font-{{ settings.cart_price_font }}--weight);
   }
 {% endstyle %}
+
+{% style %}
+  @font-face {
+    font-family: 'Andika';
+    src: url('{{ 'Andika-Bold.ttf' | asset_url }}') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Andika';
+    src: url('{{ 'Andika-R.ttf' | asset_url }}') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --font-heading--family: 'Andika', sans-serif;
+    --font-heading--weight: 700;
+    --font-accent--family: 'Andika', sans-serif;
+    --font-accent--weight: 700;
+    --font-body--family: Arial, Helvetica, sans-serif;
+    --font-subheading--family: Arial, Helvetica, sans-serif;
+  }
+
+  /* kite gift widget text was set to white in the app config */
+  .gfgFreeGiftMsgTitle,
+  .gfgFreeGiftMsgSubTitle { color: #0B2624 !important; }
+{% endstyle %}

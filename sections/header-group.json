@@ -35,7 +35,7 @@
       "settings": {
         "speed": 5,
         "section_width": "page-width",
-        "color_scheme": "scheme-6008e95a-22e4-4f40-8bd1-249ba8cb02d8",
+        "color_scheme": "scheme-4",
         "divider_width": 1,
         "padding-block-start": 15,
         "padding-block-end": 15
@@ -50,9 +50,7 @@
           "settings": {
             "hide_logo_on_home_page": false,
             "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-block-end": 0
           },
           "blocks": {}
         },
@@ -81,7 +79,7 @@
       },
       "settings": {
         "logo_position": "left",
-        "menu_position": "left",
+        "menu_position": "center",
         "menu_row": "top",
         "customer_account_menu": "customer-account-main-menu",
         "show_search": true,
