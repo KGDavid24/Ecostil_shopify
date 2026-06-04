@@ -152,6 +152,9 @@
       | image_url: width: 3840
       | image_tag: widths: widths, class: 'resource-image__image', sizes: sizes, loading: loading
     }}
+    {% if content_type == 'collections' %}
+      <span class="ai-image-badge">Imaginile sunt optimizate cu AI</span>
+    {% endif %}
   </div>
 {% else %}
   <div
