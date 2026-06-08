@@ -147,6 +147,33 @@
     height: 100%;
   }
 
+  /* Mobile: position the collection title box at the bottom of the card,
+     leaving room for the AI disclaimer badge. Matches the default
+     full-width, left-aligned look used by the other collection cards. */
+  @media screen and (max-width: 749px) {
+    .collection-card.collection-card--image-bg .collection-card__content {
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding-bottom: 40px;
+      padding-right: 8px;
+    }
+
+    /* Make the card a sizing context so the title font can scale to the
+       card's own width (not the viewport). */
+    .collection-card.collection-card--image-bg {
+      container-type: inline-size;
+    }
+
+    /* Keep every title on a single line. The font shrinks relative to the
+       card width just enough that longer titles (e.g. "...bărbați") fit,
+       while capping at the normal 1rem so shorter ones look unchanged. */
+    .collection-card--image-bg .collection-card__content .text-block,
+    .collection-card--image-bg .collection-card__content .text-block p {
+      white-space: nowrap;
+      font-size: clamp(0.7rem, 5cqi, 1rem);
+    }
+  }
+
   .collection-card__image svg {
     height: 100%;
     width: 100%;
